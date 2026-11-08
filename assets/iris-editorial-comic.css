@@ -1,0 +1,22 @@
+/* Opt-in C01 comic layout. C01 retains its own figure and inspector. */
+.iris-article-comic-panels {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .iris-article-comic-panels {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .iris-article-comic-panels svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .iris-article-comic-panels + img {
+    display: none;
+  }
+}

@@ -1,0 +1,161 @@
+.iris-editorial-pattern{--iep-border:#d8dce3;--iep-ink:#17283d;--iep-accent:#703c93;box-sizing:border-box;color:var(--iep-ink);font:1rem/1.55 system-ui,sans-serif;max-width:100%;min-width:0;padding:clamp(1rem,3vw,2rem);overflow-wrap:anywhere}
+.iris-editorial-pattern *{box-sizing:border-box;min-width:0}.iris-editorial-pattern h2{font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.2;margin:0 0 .6rem}.iris-editorial-pattern h3{font-size:1.2rem;line-height:1.35}.iris-editorial-pattern p{white-space:pre-line}.iris-editorial-pattern a{color:var(--iep-accent);text-underline-offset:.2em}.iris-editorial-pattern :is(a,button,summary,input,select){font:inherit;min-height:44px}.iris-editorial-pattern a{display:inline-flex;align-items:center;max-width:100%}.iris-editorial-pattern :focus-visible{outline:3px solid var(--iep-accent);outline-offset:3px}.iep-description{max-width:70ch}.iep-grid,.iep-collage{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1rem}.iep-card,.iep-gallery,.iep-media{border:1px solid var(--iep-border);border-radius:.75rem;padding:1rem;background:#fff;margin:0}.iep-image{width:100%;max-height:240px;object-fit:contain;display:block}.iep-image-full{max-height:70vh}.iep-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-block:1rem}.iep-action,.iris-editorial-pattern button{border:1px solid var(--iep-accent);border-radius:.4rem;padding:.5rem 1rem;background:#fff;color:var(--iep-accent);cursor:pointer}.iep-meta{font-size:1rem;margin:.5rem 0}.iep-meta div{display:flex;flex-wrap:wrap;gap:.25rem .5rem}.iep-meta dt{font-weight:600}.iep-meta dd{margin:0}.iep-section{margin-block:1.5rem}.iep-C01,.iep-E03{max-width:78ch;margin-inline:auto}.iep-D03 .iep-section{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.iep-D03 .iep-section h3{grid-column:1/-1}.iep-menu ul,.iep-links{list-style:none;padding:0}.iep-menu-wide{display:flex;flex-wrap:wrap;gap:1rem}.iep-menu details{display:none}.iep-menu summary,.iep-gallery summary{cursor:pointer}.iep-gallery summary img{max-height:160px}.iep-gallery details[open]{padding-bottom:1rem}.iep-gallery details[open] summary{margin-bottom:1rem}.iep-search{display:flex;align-items:end;flex-wrap:wrap;gap:.75rem;margin-block:1rem}.iep-search label{flex:1 1 220px}.iep-search input,.iep-search select{display:block;width:100%;padding:.5rem;border:1px solid var(--iep-border)}.iep-search p{flex-basis:100%;margin:0}.iep-timeline{padding-inline-start:1.5rem}.iep-timeline li{padding:.5rem 1rem;border-inline-start:2px solid var(--iep-accent)}.iep-status{border-inline-start:4px solid var(--iep-accent);padding:1rem;background:#f5f3f7}.iep-skip:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.iris-editorial-pattern [hidden]{display:none!important}@media(max-width:600px){.iep-menu details{display:block}.iep-menu .iep-menu-wide{display:none}.iep-menu details li{border-bottom:1px solid var(--iep-border)}.iep-menu details a{width:100%}.iep-D03 .iep-section{display:block}.iris-editorial-pattern{padding:1rem}.iep-actions>*{flex:1 1 auto}}
+
+.iep-action{display:inline-flex;align-items:center;gap:.5rem}.iep-action-icon{flex:none;object-fit:contain}
+
+/* C01 consuming preserved editorial HTML: reading links remain inline. */
+.iep-editorial-content{width:100%;max-width:78ch;margin-inline:auto;line-height:1.65}
+.iep-editorial-content p{white-space:normal}
+.iep-editorial-content a{display:inline;min-height:0;overflow-wrap:anywhere}
+.iep-editorial-content :is(h1,h2,h3,h4,h5,h6){line-height:1.25;scroll-margin-block-start:1rem}
+.iep-editorial-content figure{max-width:100%;margin:1.5rem 0}
+.iep-editorial-content :is(img,video,svg){max-width:100%;height:auto}
+.iep-editorial-content figcaption{font-size:.95em;line-height:1.45;margin-block-start:.5rem}
+.iep-editorial-content table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;overscroll-behavior-inline:contain}
+.iep-editorial-content :is(th,td){padding:.5rem .75rem;text-align:start;vertical-align:top;border:1px solid var(--iep-border)}
+.iep-editorial-content pre{max-width:100%;overflow-x:auto;white-space:pre;overflow-wrap:normal;padding:1rem;border:1px solid var(--iep-border);line-height:1.5;overscroll-behavior-inline:contain}
+.iep-editorial-content :not(pre)>code{overflow-wrap:anywhere;white-space:break-spaces}
+.iep-editorial-content blockquote{margin-inline:0;padding-inline-start:1rem;border-inline-start:3px solid var(--iep-border)}
+@media(max-width:600px){.iep-editorial-content{padding:1rem;max-width:100%}.iep-editorial-content :is(th,td){padding:.4rem .5rem}}
+
+/* The admitted fragment already owns its heading; avoid nested article spacing. */
+.iep-editorial-content>.copy{margin:0;padding:0;border:0}
+.iep-editorial-content>.copy>h1:first-child{margin-block-start:0}
+
+.iep-editorial-content table{table-layout:auto}
+.iep-editorial-content :is(th,td){overflow-wrap:normal;word-break:normal}
+
+/* C01 reading composition: one gutter, compact chrome, meaningful first fold. */
+.iris-article-page{background:#fff;font:17px/1.6 system-ui,sans-serif}
+.iris-article-page .reading-wrap{width:100%;max-width:78rem;padding:12px clamp(16px,3vw,32px);margin:auto}
+.iris-article-page .reading-wrap main{width:100%;max-width:76ch;margin:20px auto 32px;padding:0}
+.iris-article-page .breadcrumbs{background:transparent;padding:0;margin:0;border:0;font-size:14px;line-height:1.4}
+.iris-article-page .reading-wrap>.site-map{max-width:76ch;margin:24px auto 0;border:1px solid #d8dce3;border-radius:6px}
+.iris-article-page .site-map>summary{min-height:44px;font-size:14px;color:#465666}
+.iris-article-page .iep-editorial-content{max-width:none;padding:0;font:inherit;line-height:1.6}
+.iris-article-page .iep-editorial-content>.copy{margin:0;padding:0;border:0}
+.iris-article-page .iep-editorial-content>.copy>section{margin:0;padding:0;border:0}
+.iris-article-page .iep-editorial-content h1{font-size:clamp(1.65rem,2.8vw,2.25rem);line-height:1.16;letter-spacing:-.025em;margin:0 0 16px;font-weight:750;text-wrap:pretty}
+.iris-article-page .iep-editorial-content :is(h2,h3){font-size:1.3rem;line-height:1.3;margin:28px 0 12px}
+.iris-article-page .iep-editorial-content p{margin:0 0 18px}
+.iris-article-page .iep-editorial-content>.copy>section:first-child>div:first-of-type>p:first-child{font-size:1.0625rem;line-height:1.5;margin-bottom:24px;color:#263c53}
+.iris-article-page .iep-editorial-content figcaption{font-size:.9rem;line-height:1.5;color:#465666}
+.iris-article-page .iep-editorial-content table{width:100%;margin-block:16px}
+.iris-article-page .iep-editorial-content th{background:#f3f5f8;font-weight:650}
+.iris-article-page .iep-editorial-content pre{font-size:.9rem;background:#f6f8fa;border-radius:6px}
+@media(max-width:600px){
+ .iris-article-page .reading-wrap{padding:8px 16px}
+ .iris-article-page .reading-wrap main{margin:12px auto 24px}
+ .iris-article-page .iris-context-full{display:none!important}
+ .iris-article-page .iris-context-compact{display:block;width:100%}
+ .iris-article-page .iris-context-compact summary{min-height:44px}
+ .iris-article-page .iris-context-compact details[open] ol{display:block}
+ .iris-article-page .iris-context-compact li+li:before{content:none}
+ .iris-article-page .iep-editorial-content h1{margin-bottom:14px}
+}
+
+/* C01 image inspection: shared native dialog; natural image scrolls locally. */
+.iris-article-image-open{margin-block:.65rem;min-height:44px;padding:.5rem .85rem;cursor:pointer}
+.iris-article-image-dialog{box-sizing:border-box;width:min(96vw,1100px);max-width:96vw;max-height:94vh;padding:1rem;border:1px solid var(--iep-border,#d8dce3);border-radius:.6rem;color:var(--iep-ink,#17283d);background:#fff;overflow:hidden}
+.iris-article-image-dialog[open]{display:flex;flex-direction:column;gap:.75rem}
+.iris-article-image-dialog::backdrop{background:rgb(0 0 0 / .65)}
+.iris-article-image-toolbar{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:.5rem;flex:none}
+.iris-article-image-toolbar button{font:inherit;min-height:44px;padding:.5rem .85rem;cursor:pointer}
+.iris-article-image-viewport{min-height:0;max-height:72vh;max-width:100%;overflow:auto;overscroll-behavior:contain;flex:1 1 auto}
+.iris-article-image-content{display:block;max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;margin-inline:auto}
+.iris-article-image-natural .iris-article-image-content{max-width:none;max-height:none;margin:0}
+.iris-article-image-caption{font:inherit;line-height:1.45;margin:0;max-height:15vh;overflow:auto;flex:none;white-space:pre-wrap}
+.iris-article-image-dialog :focus-visible,.iris-article-image-open:focus-visible{outline:3px solid var(--iep-accent,#703c93);outline-offset:2px}
+@media(max-width:600px){.iris-article-image-dialog{width:96vw;padding:.75rem}.iris-article-image-toolbar button{flex:1}.iris-article-image-viewport{max-height:66vh}}
+
+.iris-chapter-neighbors{display:flex;justify-content:space-between;gap:16px;margin-top:32px;border-top:1px solid #d8dce3;padding-top:16px}.iris-chapter-neighbors a{min-height:44px;flex:1;max-width:48%;overflow-wrap:anywhere}.iris-chapter-neighbors a[rel="next"]{text-align:right;margin-left:auto}
+
+/* The same inspector uses the host's visible page rectangle, never iframe vh. */
+.iris-article-image-dialog.iris-article-image-hosted{position:fixed;inset:auto;margin:0;max-width:none;max-height:none}
+.iris-article-image-hosted .iris-article-image-viewport{max-height:none;display:flex;align-items:center;justify-content:center}
+.iris-article-image-hosted .iris-article-image-content{max-height:var(--iris-image-fit-height,100%);max-width:100%;flex:none}
+.iris-article-image-hosted.iris-article-image-natural .iris-article-image-viewport{display:block}
+.iris-article-image-hosted.iris-article-image-natural .iris-article-image-content{max-height:none;max-width:none}
+.iris-article-image-hosted .iris-article-image-caption{max-height:18%;font-size:.9rem}
+
+/* C01 secondary references retain all original locators in native disclosure. */
+.iris-article-page .copy section>details{margin:1.2rem 0 1.6rem;border-top:1px solid #d8dee8;color:#465666;font-size:.875rem}
+.iris-article-page .copy section>details>summary{min-height:44px;display:list-item;padding:12px 0;cursor:pointer;font-weight:500}
+.iris-article-page .copy section>details p{margin:.5rem 0;line-height:1.5}
+
+/* Finite alignment projected by the admitted Markdown table rule; no inline CSS. */
+.iep-editorial-content :is(th,td)[data-iris-align="left"]{text-align:left}
+.iep-editorial-content :is(th,td)[data-iris-align="center"]{text-align:center}
+.iep-editorial-content :is(th,td)[data-iris-align="right"]{text-align:right}
+
+/* R0227: C01 owns reading rhythm even when mounted without reading-wrap.
+   The managed HTML reader loaded by Tk consumes this very same stylesheet.
+   Only presentation changes: source text, maths and provenance stay in the DOM. */
+.iris-editorial-pattern.iep-B03{padding-block:4px}
+.iris-editorial-pattern>header>h2:empty,
+.iris-editorial-pattern>header>p:empty{display:none}
+.iris-editorial-pattern>header:not(:has(> :not(:empty))){display:none}
+.iris-editorial-pattern.iep-C01.iep-editorial-content{padding-block:12px}
+:is(.iep-editorial-content,.publication #document)>section,
+:is(.iep-editorial-content,.publication #document)>.copy>section{margin:0;padding:0}
+:is(.iep-editorial-content,.publication #document) h1{
+ font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.2;letter-spacing:-.02em;
+ margin:0 0 14px;text-wrap:pretty
+}
+:is(.iep-editorial-content,.publication #document) :is(h2,h3,h4){line-height:1.3;margin-block:24px 10px}
+:is(.iep-editorial-content,.publication #document) p{margin-block:0 14px}
+:is(.iep-editorial-content,.publication #document) :is(ul,ol){margin-block:10px 18px;padding-inline-start:1.5em}
+:is(.iep-editorial-content,.publication #document) li{margin-block:6px}
+:is(.iep-editorial-content,.publication #document) li>p{margin-block:6px}
+:is(.iep-editorial-content,.publication #document) :is(math[display="block"],.formula[data-display="true"],.iris-editorial-equation){
+ display:block;max-width:100%;margin-block:16px;padding-block:8px;
+ overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;
+ text-align:center;break-inside:avoid
+}
+:is(.iep-editorial-content,.publication #document) .iris-editorial-metadata{
+ border-block-start:1px solid var(--iep-border,var(--border,#d8dce3));
+ margin-block:12px 18px;font-size:.875em;line-height:1.5;overflow-wrap:anywhere
+}
+:is(.iep-editorial-content,.publication #document) .iris-editorial-metadata>summary{
+ min-height:44px;padding-block:10px;cursor:pointer;font-weight:600
+}
+:is(.iep-editorial-content,.publication #document) .iris-editorial-metadata>summary:focus-visible{
+ outline:3px solid var(--iep-accent,var(--accent,#703c93));outline-offset:2px
+}
+:is(.iep-editorial-content,.publication #document) .iris-editorial-metadata :is(p,ul,ol){margin-block:8px}
+@media(max-width:600px){
+ .iris-editorial-pattern.iep-C01.iep-editorial-content{padding-block:8px}
+ :is(.iep-editorial-content,.publication #document) :is(math[display="block"],.formula[data-display="true"],.iris-editorial-equation){margin-block:12px}
+}
+/* E04 navigation without descriptions: compact adjacent links, common to consumers. */
+.iep-E04>header:has(h2:empty):has(.iep-description:empty){display:none}
+.iep-E04 .iep-links:not(:has(p:not(:empty))){display:flex;flex-wrap:wrap;gap:.25rem 1rem;margin:0;padding:0}
+.iep-E04 .iep-links:not(:has(p:not(:empty)))>li{margin:0;padding:0}
+.iep-E04 .iep-links p:empty{display:none}
+.iep-E04:not(:has(.iep-links p:not(:empty))){padding-block:.5rem;margin-block:.5rem}
+/* C01 shared overflow affordance; native scrolling and formula size retained. */
+:is(.iep-editorial-content,.publication #document) .iris-equation-hint{font-size:.875rem;line-height:1.5;margin:8px 0 0;color:inherit}
+:is(.iep-editorial-content,.publication #document) .iris-equation-hint[hidden]{display:none}
+:is(.iep-editorial-content,.publication #document) .iris-editorial-equation:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+
+/* B04 presentation/0.1.0: opt-in library composition, measured in its own
+   available width. Full and omitted presentation retain historical rules. */
+.iris-editorial-pattern.iep-B04.iep-compact{container-type:inline-size;container-name:iep-b04-compact}
+.iep-B04.iep-compact .iep-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:20px;align-items:start}
+.iep-B04.iep-compact .iep-card{box-sizing:border-box;width:100%;max-width:205px;min-width:0;height:auto;padding:14px;border:0;box-shadow:none}
+.iep-B04.iep-compact .iep-image{height:190px;max-height:190px;object-fit:contain;margin:0 0 6px}
+.iep-B04.iep-compact h3{font-size:1.05rem;line-height:1.35;min-height:0;margin:0 0 2px;overflow-wrap:anywhere}
+.iep-B04.iep-compact .iep-card-information{font-size:.9rem;overflow-wrap:anywhere}
+.iep-B04.iep-compact .iep-card-information summary{box-sizing:border-box;cursor:pointer;min-height:44px;padding:10px 0;text-decoration:underline}
+.iep-B04.iep-compact .iep-card-information p{margin:8px 0}
+@container iep-b04-compact (max-width:430px){
+ .iep-B04.iep-compact .iep-grid{grid-template-columns:minmax(0,1fr)}
+ .iep-B04.iep-compact .iep-card{max-width:none;border-bottom:1px solid var(--iep-border);padding:16px 0}
+ .iep-B04.iep-compact .iep-card>div{display:grid;grid-template-columns:min(100px,35%) minmax(0,1fr);gap:0 16px;align-items:start}
+ .iep-B04.iep-compact .iep-card>div>h3:first-child{grid-column:1/-1}
+ .iep-B04.iep-compact .iep-image{height:145px;grid-row:1/3;margin:0}
+ .iep-B04.iep-compact .iep-card-information{grid-column:1/-1}
+}
+
+/* Shared chapter navigation: command and title remain separate at narrow widths. */
+.iris-chapter-neighbors a,.reading-wrap .iris-chapter-neighbors a{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}.iris-chapter-neighbors a[rel="next"],.reading-wrap .iris-chapter-neighbors a[rel="next"]{align-items:flex-end}
